@@ -19,7 +19,9 @@ namespace Ventas
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("Hola Mundo!");
+            var saludar = new Saludar();
+
+            MessageBox.Show(saludar.Saludo);
         }
     }
 }
