@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{367CDDB2-1E8E-46F3-AF1D-CE10B7FA4812}</ProjectGuid>
+    <ProjectGuid>{3BE1F6CB-D1C8-4DAD-B89F-EB301BB34499}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Ventas</RootNamespace>
@@ -46,17 +46,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BL\CategoriasBL.cs" />
+    <Compile Include="BL\ProductosBL.cs" />
+    <Compile Include="ClientesBL\CiudadBL.cs" />
+    <Compile Include="ClientesBL\ClientesBL.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ModelosP\Ciudad.cs" />
+    <Compile Include="ModelosP\Cliente.cs" />
+    <Compile Include="Modelos\Categoria.cs" />
+    <Compile Include="Modelos\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Saludar.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form3.resx">
+      <DependentUpon>Form3.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -67,6 +92,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="Properties\DataSources\Ventas.BL.CategoriasBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.BL.ProductosBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.ClientesBL.CiudadBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.ClientesBL.ClientesBL.datasource" />
+    <None Include="Properties\DataSources\Ventas.Modelos.Categoria.datasource" />
+    <None Include="Properties\DataSources\Ventas.Modelos.Producto.datasource" />
+    <None Include="Properties\DataSources\Ventas.ModelosP.Ciudad.datasource" />
+    <None Include="Properties\DataSources\Ventas.ModelosP.Cliente.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -80,6 +113,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
